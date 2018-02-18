@@ -18,5 +18,15 @@ public class InstanceVariableTest {
         //press.getOil(olives);
         int totalOil = press.getOil(olives);
         System.out.println("Total oil: " + totalOil);
+
+        // use of constructors;
+        List<Olive> olives2 = new ArrayList<>();
+//        Olive olive_a = new Olive("Kalamata", 0x2E0854, 3);
+//        Olive olive_b = new Olive("Ligurian", 0x000000, 2);
+//        Olive olive_c = new Olive("Kalamata", 0x2E0854, 3);
+        olives2.add(new Olive("Kalamata", 0x2E0854, 3));
+        olives2.add(new Olive("Ligurian", 0x000000, 2));
+        OlivePress press2 = new OlivePress();
+        System.out.println(press2.getOil(olives2));
     }
 }
