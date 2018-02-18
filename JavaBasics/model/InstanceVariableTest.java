@@ -24,8 +24,8 @@ public class InstanceVariableTest {
 //        Olive olive_a = new Olive("Kalamata", 0x2E0854, 3);
 //        Olive olive_b = new Olive("Ligurian", 0x000000, 2);
 //        Olive olive_c = new Olive("Kalamata", 0x2E0854, 3);
-        olives2.add(new Olive("Kalamata", 0x2E0854, 3));
-        olives2.add(new Olive("Ligurian", 0x000000, 2));
+        olives2.add(new Olive(OliveNames.KALAMATA, 0x2E0854, 3));
+        olives2.add(new Olive(OliveNames.LIGURIAN, 0x000000, 2));
         OlivePress press2 = new OlivePress();
         System.out.println(press2.getOil(olives2));
     }
