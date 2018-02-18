@@ -6,7 +6,7 @@ import java.util.List;
 public class InstanceVariableTest {
     public static void main(String[] args) {
         List<Olive> olives = new ArrayList<>();
-        Olive olive1 = new Olive();
+        Olive olive1 =  new Olive();
         olives.add(olive1);
         Olive olive2 = new Olive();
         olive2.setOil(1);
@@ -26,7 +26,8 @@ public class InstanceVariableTest {
 //        Olive olive_c = new Olive("Kalamata", 0x2E0854, 3);
         olives2.add(new Olive(OliveNames.KALAMATA, 0x2E0854, 3));
         olives2.add(new Olive(OliveNames.LIGURIAN, 0x000000, 2));
-        OlivePress press2 = new OlivePress();
+        //OlivePress press2 = new OlivePress();
+        Press press2 = new OlivePress();
         System.out.println(press2.getOil(olives2));
     }
 }

@@ -2,7 +2,7 @@ package JavaBasics.model;
 
 import java.util.List;
 
-public class OlivePress {
+public class OlivePress implements Press {
     public int getOil(List<Olive> olives) {
         int totalOil = 0;
         for (Olive o : olives) {
