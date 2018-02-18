@@ -5,4 +5,32 @@ public class Olive {
     public long color = 0x2E0854;
     public int oil = 3;
 
+    public String getName() {
+        return name;
+    }
+
+    public long getColor() {
+        return color;
+    }
+
+    public int getOil() {
+        return oil;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setColor(long color) {
+        this.color = color;
+    }
+
+    public void setOil(int oil) {
+        this.oil = oil;
+    }
+
+    public int crush() {
+        System.out.println("Ouch!!!");
+        return oil;
+    }
 }
