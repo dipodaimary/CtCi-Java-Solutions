@@ -9,6 +9,7 @@ public class MethodOverloading {
         String s3 = getInput("Enter third value: ");
         System.out.println(addValues(s1, s2));
         System.out.println(addValues(s1, s2, s3));
+        System.out.println(addValues(s1, s2, s3, s1, s2, s3));
     }
 
     static String getInput(String prompt) {
@@ -30,6 +31,15 @@ public class MethodOverloading {
         double d3 = Double.parseDouble(s3);
 
         double result = d1 + d2 + d3;
+        return result;
+    }
+1
+    static double addValues(String... values) {
+        double result = 0;
+        for (String value : values) {
+            double d = Double.parseDouble(value);
+            result += d;
+        }
         return result;
     }
 }
