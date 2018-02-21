@@ -1,4 +1,4 @@
-package Chapter4.Chapter4Libraries;
+package Chapter4Libraries;
 
 public class TreeNode {
     public int data;
