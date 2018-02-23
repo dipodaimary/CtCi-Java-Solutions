@@ -9,8 +9,9 @@ public class isSubTree2 {
 
     public static boolean containsTree(TreeNode t1, TreeNode t2) {
         if (t2 == null) {
-            return subtree(t1, t2);
+            return true;
         }
+        return subtree(t1, t2);
     }
 
     private static boolean subtree(TreeNode t1, TreeNode t2) {
