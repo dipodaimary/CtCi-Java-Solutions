@@ -4,7 +4,8 @@ public class Test3 {
 
     public static void main(String[] args) {
         String pali = "Rats live on no evil star";
-        System.out.println(isPermutationOfPalindrome2(pali));
+        //System.out.println(isPermutationOfPalindrome2(pali));
+        System.out.println(stringCompression("aaaabbcc"));
     }
 
     private static boolean isPermutationOfPalindrome2(String pali) {
@@ -43,5 +44,19 @@ public class Test3 {
         } else {
             return -1;
         }
+    }
+
+    private static String stringCompression(String str) {
+        StringBuilder sb = new StringBuilder();
+        int countConsequtive = 0;
+        for (int i = 0; i < str.length(); i++) {
+            countConsequtive++;
+            if (i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1)) {
+                sb.append(str.charAt(i));
+                sb.append(countConsequtive);
+                countConsequtive = 0;
+            }
+        }
+        return sb.toString();
     }
 }
