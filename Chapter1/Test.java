@@ -1,8 +1,11 @@
 package Chapter1;
 
+import java.util.Arrays;
+
 public class Test {
     public static void main(String[] args) {
-        System.out.println(isUnique("dipod"));
+        //System.out.println(isUnique("dipod"));
+        System.out.println(isPermutation("dipo", "opid"));
     }
 
     public static boolean isUnique(String str) {
@@ -16,5 +19,15 @@ public class Test {
             }
         }
         return true;
+    }
+
+    public static boolean isPermutation(String str1, String str2) {
+        char[] arr1 = str1.toCharArray();
+        char[] arr2 = str2.toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        String stra = new String(arr1);
+        String strb = new String(arr2);
+        return stra.equals(strb);
     }
 }
