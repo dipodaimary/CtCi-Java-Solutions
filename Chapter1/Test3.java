@@ -5,7 +5,8 @@ public class Test3 {
     public static void main(String[] args) {
         String pali = "Rats live on no evil star";
         //System.out.println(isPermutationOfPalindrome2(pali));
-        System.out.println(stringCompression("aaaabbcc"));
+        //System.out.println(stringCompression("aaaabbcc"));
+        System.out.println(isStringRotation("waterbootle", "tlewaterboo"));
     }
 
     private static boolean isPermutationOfPalindrome2(String pali) {
@@ -58,5 +59,11 @@ public class Test3 {
             }
         }
         return sb.toString();
+    }
+
+    private static boolean isStringRotation(String s1, String s2) {
+        String s1s1 = s1 + s1;
+        System.out.println(s1s1.contains(s2));
+        return s1s1.contains(s2);
     }
 }
