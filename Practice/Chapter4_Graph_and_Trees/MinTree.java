@@ -1,7 +1,7 @@
 package Trees_and_Graphs;
 
 public class MinTree {
-    public void main(String[] args) {
+    public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         TreeNode n = createMinBST(arr);
         inOrder(n);
@@ -39,11 +39,11 @@ public class MinTree {
         }
     }
 
-    public TreeNode createMinBST(int[] arr) {
+    public static TreeNode createMinBST(int[] arr) {
         return createMinBST(arr, 0, arr.length - 1);
     }
 
-    private TreeNode createMinBST(int[] arr, int start, int end) {
+    private static TreeNode createMinBST(int[] arr, int start, int end) {
         if (start > end) {
             return null;
         }
