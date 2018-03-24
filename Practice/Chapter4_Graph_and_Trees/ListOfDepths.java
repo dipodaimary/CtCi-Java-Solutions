@@ -36,7 +36,7 @@ public class ListOfDepths {
         }
     }
 
-    public ArrayList<LinkedList<TreeNode>> getLevelLinkedList(TreeNode root) {
+    public ArrayList<LinkedList<TreeNode>> getLevelLinkedListRecursive(TreeNode root) {
         ArrayList<LinkedList<TreeNode>> lists = new ArrayList<>();
         createLevelLinkedList(root, lists, 0);
         return lists;
@@ -61,5 +61,21 @@ public class ListOfDepths {
         if (root.getRight() != null) {
             createLevelLinkedList(root.getRight(), lists, level + 1);
         }
+    }
+
+    public static ArrayList<LinkedList<TreeNode>> ListOfDepthsNonRecursive(TreeNode root) {
+        ArrayList<LinkedList<TreeNode>> result = new ArrayList<>();
+        LinkedList<TreeNode> current = new LinkedList<>();
+        if (root != null) current.add(root);
+        while (current.size() > 0) {
+            result.add(current);
+            LinkedList<TreeNode> parents = current;
+            current = new LinkedList<>();
+            for (TreeNode n : parents) {
+                if (n.getLeft() != null) current.add(n.getLeft());
+                if (n.getRight() != null) current.add(n.getRight());
+            }
+        }
+        return result;
     }
 }
