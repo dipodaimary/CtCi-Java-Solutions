@@ -35,4 +35,25 @@ public class CommonAncestor {
         }
         return parent;
     }
+
+    public TreeNode commonAncestorWtioutLinkToParen(TreeNode root, TreeNode p, TreeNode q) {
+        //Check if one node is not in the tree
+        if (!covers(root, p) || !covers(root, q)) {
+            return null;
+        }
+        return ancestorHelper(root, p, q);
+    }
+
+    private TreeNode ancestorHelper(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || root == p || root == q) {
+            return root;
+        }
+        boolean pIsOnLeft = covers(root.getLeft(), p);
+        boolean qIsOnLeft = covers(root.getLeft(), q);
+        if (pIsOnLeft != qIsOnLeft) {
+            return root;
+        }
+        TreeNode childSide = pIsOnLeft ? root.getLeft() : root.getRight();
+        return ancestorHelper(childSide, p, q);
+    }
 }
