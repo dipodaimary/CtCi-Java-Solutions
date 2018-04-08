@@ -6,13 +6,13 @@ public class Q8_EnglishInt {
     static String[] smalls = {"Zero", "One ", "Two ", "Three ", "Four ", "Five ", "Six ", "Seven ", "Eight ",
             "Nine ", "Ten ", "Eleven ", "Twelve ", "Thirteen ", "Fourteen ", "Fifteen ", "Fourteen ",
             "Fifteen ", "Sixteen ", "Seventeen ", "Eighteen ", "Nineteen "};
-    static String[] tens = {"", "Twenty", "Thirty", "Fourty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+    static String[] tens = {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
     static String[] bigs = {"", "Thousand", "Million", "Billion"};
     static String hundred = "Hundred";
     static String negative = "Negative";
 
     public static void main(String[] args) {
-        System.out.println(convert(1091034849));
+        System.out.println(convert(109103449));
     }
 
     public static String convert(int num) {
