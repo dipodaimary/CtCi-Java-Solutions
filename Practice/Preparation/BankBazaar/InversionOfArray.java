@@ -62,6 +62,7 @@ public class InversionOfArray {
                 count = count + m - i;
             }
         }
+        //duplicates and equal elements
         while (i < m) {
             arr[k++] = LArr[i++];
         }
@@ -82,7 +83,7 @@ public class InversionOfArray {
             if (arr[start] <= arr[end]) {
                 return 0;
             } else {
-                //Swap
+                //Swap elements by bitwise operation
                 arr[start] = arr[start] ^ arr[end];
                 arr[end] = arr[start] ^ arr[end];
                 arr[start] = arr[start] ^ arr[end];
